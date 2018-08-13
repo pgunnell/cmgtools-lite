@@ -163,6 +163,11 @@ pileUpAna = cfg.Analyzer(
     makeHists=False
     )
 
+#added by Paolo
+#charged particle analyzer
+chpartAna = cfg.Analyzer(
+    ChargedParticleAnalyzer, name="ChargedParticleAnalyzer",
+    )
 
 ## Gen Info Analyzer (generic, but should be revised)
 genAna = cfg.Analyzer(
@@ -556,6 +561,7 @@ dmCoreSequence = [
     vertexAna,
     lepAna,
     jetAna,
+    chpartAna,
     ttHLepSkim,
     metAna,
     photonAna,
@@ -572,4 +578,5 @@ dmCoreSequence = [
     badMuonAnaMoriond2017,
     badCloneMuonAnaMoriond2017,
     badChargedHadronAna,
+
 ]
